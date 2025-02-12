@@ -7,20 +7,19 @@
     "noEmitOnError": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "declaration": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", 
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx", 
     "incremental": true,
     "strictPropertyInitialization": false,
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["src"], 
   "exclude": ["node_modules", "dist"]
 }
