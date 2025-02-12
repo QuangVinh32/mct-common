@@ -2,9 +2,11 @@
     "name": "phaser-editor-template-nextjs",
     "version": "1.1.1",
     "description": "A Phaser 3 Next.js project template that demonstrates Next.js with React communication and uses Vite for bundling.",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/phaserjs/template-nextjs.git"
+        "url": "git+https://github.com/QuangVinh32/mct-common.git"
     },
     "author": "Phaser Studio <support@phaser.io> (https://phaser.io/)",
     "license": "MIT",
@@ -22,10 +24,12 @@
         "typescript"
     ],
     "scripts": {
-        "dev": "node log.js dev & next dev -p 3009",
+        "dev": "node log.js dev & next dev -p 3000",
         "build": "node log.js build & next build",
-        "dev-nolog": "next dev -p 3009",
-        "build-nolog": "next build"
+        "dev-nolog": "next dev -p 3000",
+        "build-nolog": "next build",
+        "build:lib": "tsc",
+        "prepare": "npm run build:lib"  
     },
     "dependencies": {
         "next": "14.2.3",
