@@ -3,8 +3,10 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "es2015"
     ],
+    "target": "es2015",
     "allowJs": true,
     "outDir": "dist",
     "rootDir": "src",
