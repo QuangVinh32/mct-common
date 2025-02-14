@@ -1,5 +1,5 @@
 
-export default class InPut{
+export class InPut{
     
 add(a: number, b: number): number {
     return a + b;

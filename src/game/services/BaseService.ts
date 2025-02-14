@@ -1,4 +1,4 @@
-export default class BaseService<T> {
+export class BaseService<T> {
     protected scene: Phaser.Scene;
     protected jsonPath: string;
     protected items: T[] = [];

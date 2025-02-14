@@ -2,7 +2,7 @@
 
 import { AUTO, Game } from "phaser";
 import Boot from "./scenes/Boot";
-import LoadingScene from "./scenes/LoadingScene";
+import { LoadingScene } from "./scenes/LoadingScene";
 import MainGame from './scenes/Game';
 
 
