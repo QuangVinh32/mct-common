@@ -1,4 +1,4 @@
-export class BaseController<T> {
+export default class BaseController<T> {
     protected items: T[] = [];
 
     public addItem(item: T): void {

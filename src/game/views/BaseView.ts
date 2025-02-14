@@ -1,4 +1,4 @@
-export class BaseView extends Phaser.GameObjects.Container {
+export default class BaseView extends Phaser.GameObjects.Container {
     public scene: Phaser.Scene;
     // private graphics: Phaser.GameObjects.Graphics; 
 
