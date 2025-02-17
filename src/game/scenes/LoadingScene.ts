@@ -68,29 +68,31 @@ export default class LoadingScene extends Phaser.Scene {
         container.add([text, addition, subtraction, division1, division2, multiplication, 
             infinitive1,
              diamond]);
+
+        const duration = 150;
         
         this.tweens.add({
             targets: [addition], 
             scale: 1, 
-            duration: 500, 
+            duration: duration, 
             ease: 'Back.easeOut',
             onComplete: () => {
                 this.tweens.add({
                     targets: [subtraction], 
                     scale: 1, 
-                    duration: 500, 
+                    duration: duration, 
                     ease: 'Back.easeOut',
                     onComplete: () => {
                         this.tweens.add({
                             targets: [multiplication], 
                             scale: 1, 
-                            duration: 500, 
+                            duration: duration, 
                             ease: 'Back.easeOut',
                             onComplete: () => {
                                 this.tweens.add({
                                     targets: [division1, division2], 
                                     scale: 1, 
-                                    duration: 500, 
+                                    duration: duration, 
                                     ease: 'Back.easeOut',
                                     onComplete: () => {
                                         const cropData = { x: 41, width: 18 };
@@ -178,10 +180,12 @@ export default class LoadingScene extends Phaser.Scene {
             color: 'white',
         }).setOrigin(0.5);
 
+        const loadingDuration = 1500;
+
         this.tweens.addCounter({
             from: 0,
             to: 100,
-            duration: 3000,
+            duration: loadingDuration,
             onUpdate: (tween) => {
                 const value = Math.round(tween.getValue());
                 loadingBarFill.width = (value / 100) * loadingBarWidth;
