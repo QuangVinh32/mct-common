@@ -25,20 +25,19 @@
         "typescript"
     ],
     "scripts": {
-        "dev": "node log.js dev & next dev -p 3004",
+        "dev": "node log.js dev & next dev -p 3000",
         "build": "node log.js build & next build",
-        "dev-nolog": "next dev -p 3004",
+        "dev-nolog": "next dev -p 3000",
         "build-nolog": "next build",
         "build:lib": "tsc",
         "prepare": "npm run build:lib"
     },
     "dependencies": {
-        "next": "14.2.3",
+        "next": "^14.2.3",
         "phaser": "^3.85.2",
         "react": "^18",
         "react-dom": "^18",
         "typescript": "^5"
-
     },
     "devDependencies": {
         "@types/node": "20.17.17",
