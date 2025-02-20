@@ -1,4 +1,3 @@
-import { Grid } from "matter";
 import BaseController from "./game/bases/BaseController";
 import BaseDTO from "./game/bases/BaseDTO";
 import BaseService from "./game/bases/BaseService";
@@ -15,6 +14,7 @@ import { ICheckable } from "./game/math/components/interfaces/ICheckable";
 import { IComparable } from "./game/math/components/interfaces/IComparable";
 import { INumberable } from "./game/math/components/interfaces/INumberable";
 import { Cell } from "./game/math/systems/Cell";
+import { Grid } from "matter";
 import { ArrayUtils } from "./game/math/utils/ArrrayUtils";
 import { DepthUtil } from "./game/math/utils/DepthUtil";
 import LoadingScene from "./game/scenes/LoadingScene";
@@ -23,8 +23,29 @@ import { ExpressionHelper } from "./game/math/helpers/ExpressionHelper";
 import { TextStyleHelper } from "./game/math/helpers/TextStyleHelper";
 import { VSCH } from "./game/math/helpers/ViewSizeCalculatorHellper";
 import { NumberHelper } from "./game/math/helpers/NumberHelper";
-
-
+import { ElementFactory } from "./game/math/factories/ElementFactory";
+import { EquationFactory } from "./game/math/factories/EquationFactory";
+import { ExpressionFactory } from "./game/math/factories/ExpressionFactory";
+import { IFactory } from "./game/math/factories/IFactory";
+import { ProblemFactory } from "./game/math/factories/ProblemFactory";
+import { CheckResponse } from "./game/math/components/models/CheckResponse";
+import { ElementModel } from "./game/math/components/models/ElementModel";
+import { EquationModel } from "./game/math/components/models/EquationModel";
+import { ExpressionBlankModel } from "./game/math/components/models/ExpressionBlankModel";
+import { ExpressionModel } from "./game/math/components/models/ExpressionModel";
+import { ExpressionNormalModel } from "./game/math/components/models/ExpressionNormalModel";
+import { NumberBlankModel } from "./game/math/components/models/NumberBlankModel";
+import { NumberModel } from "./game/math/components/models/NumberModel";
+import { NumberNormalModel } from "./game/math/components/models/NumberNormalModel";
+import { OperatorModel } from "./game/math/components/models/OperatorModel";
+import { ProblemEquationModel } from "./game/math/components/models/ProblemEquationModel";
+import { ProblemEquationSelectAnswerMultipleModel } from "./game/math/components/models/ProblemEquationSelectAnswerMultipleModel";
+import { ProblemEquationSelectAnswerSingleModel } from "./game/math/components/models/ProblemEquationSelectAnswerSingleModel";
+import { ProblemMatchThePairModel } from "./game/math/components/models/ProblemMatchThePairModel";
+import { ProblemModel } from "./game/math/components/models/ProblemModel";
+import { ProblemSequenceModel } from "./game/math/components/models/ProblemSequenceModel";
+import { SequenceModel } from "./game/math/components/models/SequenceModel";
+import { TextModel } from "./game/math/components/models/TextModel";
 
 
 export { BaseController, BaseDTO, BaseService, LoadingScene, BaseView };
@@ -33,9 +54,10 @@ export { BlankTypeEnum, DrawDirectionEnum, ElementTypeEnum, EquationSideEnum, Ex
 // component - interfaces
 export type { ICalculatable, ICheckable, IComparable, INumberable }
 // component - models
-
+export { CheckResponse, ElementModel, EquationModel, ExpressionBlankModel,ExpressionModel, ExpressionNormalModel, NumberBlankModel, NumberModel, NumberNormalModel, OperatorModel, ProblemEquationModel, ProblemEquationSelectAnswerMultipleModel, ProblemEquationSelectAnswerSingleModel, ProblemMatchThePairModel, ProblemModel, ProblemSequenceModel, SequenceModel, TextModel  }
 // factories
-
+export { ElementFactory, EquationFactory, ExpressionFactory, ProblemFactory };
+export type { IFactory };
 // helpers
 export { ExpressionHelper, NumberHelper, TextStyleHelper, VSCH }
 // systems
