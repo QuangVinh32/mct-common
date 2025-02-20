@@ -61,9 +61,7 @@ export default class LoadingScene extends Phaser.Scene {
         color: 'white',
         }).setOrigin(0.5).setResolution(2).setAlpha(0);
         
-        container.add([text, addition, subtraction, division1, division2, multiplication, 
-            infinitive1,
-             diamond]);
+        container.add([text, addition, subtraction, division1, division2, multiplication, infinitive1, diamond]);
 
         const duration = 150;
         
@@ -188,7 +186,7 @@ export default class LoadingScene extends Phaser.Scene {
                 loadingText.setText(`${value}%`); 
             },
             onComplete: () => {
-                // this.scene.start('GamePlayScene'); 
+                this.scene.start('GamePlayScene'); 
             },
         });
     }
